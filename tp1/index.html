@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajustando con hábitos saludables · Leandro Collell · ECD.2025.B</title>
+  <style>
+    :root {
+      --fg: #1a1a1a; --bg: #fafaf7; --muted: #6b6b6b;
+      --accent: #8b3a2e; --accent-soft: #f0e5e2;
+      --secondary: #2d5f5d; --rule: #e5e2d9; --max: 780px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 18px; line-height: 1.65; color: var(--fg); background: var(--bg); }
+    header, main, footer { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    header { padding-top: 80px; padding-bottom: 40px; border-bottom: 1px solid var(--rule); }
+    h1 { font-size: 44px; line-height: 1.1; margin: 0 0 16px 0; font-weight: 700; letter-spacing: -0.02em; }
+    .subtitle { font-style: italic; color: var(--muted); font-size: 19px; margin: 0 0 8px 0; }
+    .author { font-size: 13px; color: var(--muted); margin: 0; font-family: -apple-system, system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.1em; }
+    .intro { padding: 44px 0; font-size: 19px; border-bottom: 1px solid var(--rule); }
+    .intro p:first-child::first-letter { font-size: 4em; float: left; line-height: 0.9; padding-right: 12px; padding-top: 4px; font-weight: 700; color: var(--accent); }
+    .numbers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 28px 0 0; padding: 20px 0; border-top: 1px solid var(--rule); }
+    .num { text-align: center; }
+    .num-big { font-size: 30px; font-weight: 700; color: var(--accent); line-height: 1; font-variant-numeric: tabular-nums; }
+    .num-lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 6px; font-family: -apple-system, system-ui, sans-serif; }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 28px 0 0; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+    .split-half { padding: 16px 18px; }
+    .split-half.baseline { background: #f4f2ea; }
+    .split-half.completo { background: var(--accent-soft); }
+    .split-lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-family: -apple-system, system-ui, sans-serif; margin-bottom: 6px; color: var(--muted); font-weight: 600; }
+    .split-big { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
+    .split-sub { font-size: 13px; color: var(--muted); margin-top: 6px; font-family: -apple-system, system-ui, sans-serif; }
+    section.viz { padding: 56px 0; border-bottom: 1px solid var(--rule); }
+    section.viz h2 { font-size: 30px; line-height: 1.2; margin: 0 0 8px 0; color: var(--accent); font-weight: 700; }
+    .tool-tag { display: inline-block; font-family: -apple-system, system-ui, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); background: var(--accent-soft); padding: 4px 10px; border-radius: 3px; margin-bottom: 22px; }
+    .embed { margin: 22px 0; min-height: 400px; background: #fff; border: 1px solid var(--rule); border-radius: 3px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-style: italic; }
+    .embed iframe { width: 100%; border: 0; display: block; }
+    .insight { font-size: 16px; color: var(--fg); background: var(--accent-soft); padding: 18px 22px; border-left: 3px solid var(--accent); margin: 22px 0 0 0; line-height: 1.6; }
+    .insight strong { font-variant: small-caps; letter-spacing: 0.05em; }
+    .conclusiones { padding: 56px 0; }
+    .conclusiones h2 { font-size: 32px; margin: 0 0 22px 0; }
+    .conclusiones ol { padding-left: 22px; margin: 18px 0; }
+    .conclusiones ol li { margin-bottom: 14px; }
+    footer { padding: 40px 24px; font-size: 13px; color: var(--muted); font-family: -apple-system, system-ui, sans-serif; border-top: 1px solid var(--rule); margin-top: 24px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      h1 { font-size: 32px; } section.viz h2 { font-size: 22px; } body { font-size: 16px; }
+      .numbers { grid-template-columns: repeat(2, 1fr); } .split { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <p class="author">Trabajo Práctico 1 · Visualización de Datos Personales · ECD.2025.B</p>
+  <h1>Ajustando con hábitos saludables</h1>
+  <p class="subtitle">Diecisiete días registrando peso, glucemia y actividad física en una misma moneda. ¿Qué cambia cuando el cuerpo empieza a moverse con intención?</p>
+  <p class="author" style="margin-top:16px;">Leandro Collell · Abril 2026</p>
+</header>
+
+<main>
+
+  <section class="intro">
+    <p>Del 7 al 23 de abril registré seis variables sobre mi propio cuerpo: peso, glucemia capilar, pasos, horas de gimnasio, horas de pádel y calorías totales. Los primeros seis días caminaba pero no entrenaba, y ahí la glucemia promedio fue de 140 mg/dL. Desde el 13 de abril sumé entrenamientos estructurados y la glucemia promedio bajó a 122. En paralelo bajé 3,15 kilos. Para comparar actividades distintas en una misma escala usé los <em>pasos equivalentes</em>, que convierten cada hora de gimnasio o pádel en su equivalencia calórica expresada en pasos caminados. Esta página responde cuatro preguntas sobre esos diecisiete días.</p>
+
+    <div class="numbers">
+      <div class="num"><div class="num-big">27</div><div class="num-lbl">Mediciones</div></div>
+      <div class="num"><div class="num-big">17</div><div class="num-lbl">Días</div></div>
+      <div class="num"><div class="num-big">−3,15</div><div class="num-lbl">kg al final</div></div>
+      <div class="num"><div class="num-big">29k</div><div class="num-lbl">Pasos eq. pico</div></div>
+    </div>
+
+    <div class="split">
+      <div class="split-half baseline">
+        <div class="split-lbl">7–12 abril · Baseline</div>
+        <div class="split-big">140 mg/dL</div>
+        <div class="split-sub">Glucemia promedio · sin entrenamientos · 5.979 pasos eq. diarios</div>
+      </div>
+      <div class="split-half completo">
+        <div class="split-lbl">13–23 abril · Con entrenamiento</div>
+        <div class="split-big">122 mg/dL</div>
+        <div class="split-sub">Glucemia promedio · 4 gym · 2 pádel · 12.291 pasos eq. diarios</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="viz" id="viz-1">
+    <span class="tool-tag">Datawrapper · Gráfico de dispersión con regresión</span>
+    <h2>¿Qué mide mejor mi actividad: los pasos del podómetro o los pasos equivalentes?</h2>
+    <div class="embed">
+      [Embed Datawrapper — scatter Pasos_equivalentes × Glucosa]
+    </div>
+    <p class="insight"><strong>Qué muestra →</strong> La correlación entre glucemia y pasos crudos es de 0,05, prácticamente nula. Con pasos equivalentes, que ponderan gimnasio y pádel, la correlación pasa a −0,41. Los pasos solos no describen bien mi actividad: el podómetro no distingue entre caminar mucho y entrenar. La moneda común sí.</p>
+  </section>
+
+  <section class="viz" id="viz-2">
+    <span class="tool-tag">RAWGraphs + Inkscape · Beeswarm por nivel de actividad</span>
+    <h2>¿A partir de cuánta actividad baja la glucemia?</h2>
+    <div class="embed">
+      [SVG RAWGraphs — beeswarm glucemia por cuartil de pasos equivalentes]
+    </div>
+    <p class="insight"><strong>Qué muestra →</strong> El descenso no es gradual. Hasta 10.000 pasos equivalentes diarios la glucemia media se mantiene en torno a 128 mg/dL. Al cruzar ese umbral baja a 114, y sobre los 20.000 cae a 106. Caminar más no alcanza; agregar gimnasio o pádel sí mueve la aguja. La muestra en los rangos altos es pequeña (n=2 en cada uno), así que el patrón necesita más días para confirmarse.</p>
+  </section>
+
+  <section class="viz" id="viz-3">
+    <span class="tool-tag">Flourish · Scrollytelling</span>
+    <h2>¿Qué cambió el día que empecé a entrenar?</h2>
+    <div class="embed">
+      [Embed Flourish — scrollytelling con fases y tres líneas]
+    </div>
+    <p class="insight"><strong>Qué muestra →</strong> El gráfico cuenta los diecisiete días como una narrativa con dos mitades. Seis días de baseline con glucemia promedio de 140. Once días con entrenamiento donde bajó a 122, los pasos equivalentes se duplicaron y el peso cayó 3,15 kilos. El pico del 20 de abril, el único día con gimnasio y pádel combinados, registró 29.294 pasos equivalentes y tres mediciones de glucemia que nunca pasaron de 123.</p>
+  </section>
+
+  <section class="viz" id="viz-4">
+    <span class="tool-tag">Tableau Public · Dashboard interactivo</span>
+    <h2>¿Qué pasa en cada día y en cada momento?</h2>
+    <div class="embed">
+      [Embed Tableau Public — dashboard 4 hojas con filtros cruzados]
+    </div>
+    <p class="insight"><strong>Qué muestra →</strong> Cuatro vistas vinculadas para explorar libremente: evolución temporal, glucemia por tipo de día, calendario de actividad por día y momento, y tabla de detalle. Seleccionar cualquier medición filtra las demás.</p>
+  </section>
+
+  <section class="conclusiones">
+    <h2>¿Qué aprendí al momento?</h2>
+    <ol>
+      <li>Los pasos equivalentes son la mejor métrica que tengo para predecir glucemia en este período: −0,41 contra 0,05 del podómetro crudo. Entrenar no es lo mismo que caminar.</li>
+      <li>Existe un umbral alrededor de los 10.000 pasos equivalentes: es cuando la glucemia empieza a bajar de manera consistente.</li>
+      <li>Entre baseline y fase con entrenamiento cambiaron simultáneamente glucemia, peso y actividad, pero el diseño no permite aislar causas: el registro empezó al mismo tiempo que los entrenamientos, y no registré alimentación ni sueño.</li>
+      <li>El último registro (23/4, 77,95 kg) es probablemente un outlier: ese día estuve cortando el pasto durante varias horas, una actividad física que no quedó capturada ni como gimnasio ni como pádel ni en los pasos del celular (quedó en casa). Parte de esa caída final es deshidratación por esfuerzo no registrado, no pérdida de grasa. Si excluyo ese dato, la baja real entre el 13 y el 22 de abril es de 81,10 → 79,15 kg (−1,95 kg en 10 días): sigue siendo mucho y una parte importante todavía es agua y glucógeno, pero la magnitud es más razonable. Lo honesto es reconocer que el registro no captura todo lo que el cuerpo hace.</li>
+    </ol>
+    <p>Limitación de fondo: 17 días es una ventana corta. Próximos pasos: ampliar el registro y cruzar con alimentación y descanso.</p>
+    <p><em>Nota: estos datos son personales. Surgen de registros en Accu-Chek (glucemia) y pasos del podómetro del celular. No constituyen diagnóstico médico.</em></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    Datos registrados del 7 al 23 de abril de 2026 · 27 observaciones en 17 días · 6 variables directas y derivadas ·
+    Sujeto: hombre, 46 años, 165 cm · BMR Mifflin-St Jeor: 1.602 kcal/día ·
+    Herramientas: Datawrapper, RAWGraphs, Inkscape, Flourish, Tableau Public ·
+    <a href="https://github.com/lcollell-cell/infovis/tree/main/tp1">Código fuente en GitHub</a>
+  </p>
+</footer>
+
+</body>
+</html>
