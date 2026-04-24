@@ -56,7 +56,7 @@
 <header>
   <p class="author">Trabajo Práctico 1 · Visualización de Datos Personales · ECD.2025.B</p>
   <h1>Ajustando con hábitos saludables</h1>
-  <p class="subtitle">Diecisiete días registrando peso, glucemia y actividad física en una misma moneda. ¿Qué cambia cuando el cuerpo empieza a moverse con intención?</p>
+  <p class="subtitle">Diecisiete días registrando peso, glucemia y actividad física. ¿Qué se puede aprender para mejorar?</p>
   <p class="author" style="margin-top:16px;">Leandro Collell · Abril 2026</p>
 </header>
 
@@ -90,9 +90,22 @@
     <span class="tool-tag">Datawrapper · Gráfico de dispersión con regresión</span>
     <h2>¿Qué mide mejor mi actividad: los pasos del podómetro o los pasos equivalentes?</h2>
     <div class="embed">
-      [Embed Datawrapper — scatter Pasos_equivalentes × Glucosa]
+      <iframe title="Pasos equivalentes vs Glucosa" aria-label="Scatter Plot" id="datawrapper-chart-0QQQZ" src="https://datawrapper.dwcdn.net/0QQQZ/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="494" data-external="1"></iframe>
+<script type="text/javascript">
+  window.addEventListener("message", function(a) {
+    if (void 0 !== a.data["datawrapper-height"]) {
+      var e = document.querySelectorAll("iframe");
+      for (var t in a.data["datawrapper-height"])
+        for (var r, i = 0; r = e[i]; i++)
+          if (r.contentWindow === a.source) {
+            var d = a.data["datawrapper-height"][t] + "px";
+            r.style.height = d
+          }
+    }
+  });
+</script>	  
     </div>
-    <p class="insight"><strong>Qué muestra →</strong> La correlación entre glucemia y pasos crudos es de 0,05, prácticamente nula. Con pasos equivalentes, que ponderan gimnasio y pádel, la correlación pasa a −0,41. Los pasos solos no describen bien mi actividad: el podómetro no distingue entre caminar mucho y entrenar. La moneda común sí.</p>
+    <p class="insight"><strong>Qué muestra →</strong> La correlación entre glucemia y pasos crudos es de 0,05, prácticamente nula. Con pasos equivalentes, que ponderan gimnasio y pádel, la correlación pasa a −0,41. Los pasos solos no describen bien mi actividad: el podómetro no distingue entre caminar mucho y entrenar. Los pasos equivalentes sí.</p>
   </section>
 
   <section class="viz" id="viz-2">
