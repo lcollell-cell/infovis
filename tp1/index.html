@@ -63,7 +63,7 @@
 <main>
 
   <section class="intro">
-    <p>Del 7 de abril al 7 de mayo registré seis variables sobre mi propio cuerpo: peso, glucemia capilar, pasos, horas de gimnasio, horas de pádel y calorías totales. Los primeros seis días caminaba pero no entrenaba, y ahí la glucemia promedio fue de 140 mg/dL. Desde el 13 de abril sumé entrenamientos estructurados y la glucemia promedio bajó a 122. En paralelo bajé 3,15 kilos. Para comparar actividades distintas en una misma escala usé los <em>pasos equivalentes</em>, que convierten cada hora de gimnasio o pádel en su equivalencia calórica expresada en pasos caminados. Esta página responde cuatro preguntas sobre esos diecisiete días.</p>
+    <p>Del 7 de abril al 7 de mayo registré seis variables sobre mi propio cuerpo: peso, glucemia capilar, pasos, horas de gimnasio, horas de pádel y calorías totales. El registro cubre tres etapas. Los primeros seis días caminaba pero no entrenaba — la glucemia promedio fue de 140 mg/dL. Desde el 13 de abril sumé entrenamientos estructurados y la glucemia bajó a 122 mg/dL. A partir del 25 de abril continué en una etapa de seguimiento de once días: la glucemia se mantuvo estable en 121 mg/dL incluso con seis días de descanso, lo que sugiere que el efecto del entrenamiento persiste más allá de la sesión individual. Para comparar actividades distintas en una misma escala usé los <em>pasos equivalentes</em>, que convierten cada hora de gimnasio o pádel en su equivalencia calórica expresada en pasos caminados. Esta página responde cuatro preguntas sobre esas cuatro semanas.</p>
 
     <div class="numbers">
       <div class="num"><div class="num-big">27</div><div class="num-lbl">Mediciones</div></div>
@@ -105,7 +105,7 @@
   });
 </script>	  
     </div>
-    <p class="insight"><strong>Qué muestra →</strong> La correlación entre glucemia y pasos de podómetro es de 0,05, prácticamente nula. Con pasos equivalentes, que ponderan gimnasio y pádel, la correlación pasa a −0,31. Los pasos solos no describen bien mi actividad: el podómetro no distingue entre caminar mucho y entrenar. Los pasos equivalentes sí. Otra observación importante es que puede 2 hs de gym bajar la glucemia aproximadamente igual que 1 hora y media de padel y 1 hora de gym, aunque harían falta mas observaciones para validar la información.</p>
+    <p class="insight"><strong>Qué muestra →</strong> La correlación entre glucemia y pasos de podómetro es de 0,02, prácticamente nula. Con pasos equivalentes, que ponderan gimnasio y pádel, la correlación pasa a −0,36. Los pasos solos no describen bien mi actividad: el podómetro no distingue entre caminar mucho y entrenar. Los pasos equivalentes sí. También se observa que 2 hs de gym pueden bajar la glucemia aproximadamente igual que 1 hora y media de pádel combinada con 1 hora de gym, aunque harían falta más observaciones para validar esa equivalencia.</p>
   </section>
 
   <section class="viz" id="viz-2">
@@ -126,7 +126,7 @@
       <script src="https://public.flourish.studio/resources/embed.js"></script>
      
     </div>
-    <p class="insight"><strong>Qué muestra →</strong> Primera aproximación arroja glucemia promedio de 140. Once días con entrenamiento bajó a 122, los pasos equivalentes se duplicaron y el peso cayó 3,15 kilos (aunque está mas cerca de 2 kilos reales). El pico del 20 de abril, el único día con gimnasio y pádel combinados, registró 29.294 pasos equivalentes y tres mediciones de glucemia que nunca pasaron de 123.</p>
+    <p class="insight"><strong>Qué muestra →</strong> La primera etapa sin entrenamiento arroja glucemia promedio de 140 mg/dL. Once días con entrenamiento la bajaron a 122 mg/dL, los pasos equivalentes se duplicaron y el peso descendió desde 81,10 kg. El pico del 20 de abril — único día con gimnasio y pádel combinados — registró 29.294 pasos equivalentes y tres mediciones de glucemia que nunca pasaron de 123 mg/dL. En la etapa de seguimiento (25/4–7/5), la glucemia se mantuvo estable en 121 mg/dL con mayor volumen de entrenamiento pero también con seis días de descanso intercalados.</p>
   </section>
 
   <section class="viz" id="viz-4">
@@ -141,12 +141,13 @@
   <section class="conclusiones">
     <h2>¿Qué aprendí al momento?</h2>
     <ol>
-      <li>Los pasos equivalentes son la mejor métrica que tengo para predecir glucemia en este período: −0,41 contra 0,05 del podómetro crudo. Entrenar no es lo mismo que caminar.</li>
-      <li>Existe un umbral alrededor de los 10.000 pasos equivalentes: es cuando la glucemia empieza a bajar de manera consistente.</li>
-      <li>No registré alimentación ni sueño, las causas de la tendencia a la baja todavía no son claras, pocos datos.</li>
-      <li>El último registro (23/4, 77,95 kg) es un outlier: ese día estuve cortando el pasto durante varias horas, una actividad física que no quedó capturada ni como gimnasio ni como pádel ni en los pasos del celular (quedó en casa). Parte de esa caída final es deshidratación por esfuerzo no registrado, no pérdida de grasa. Si excluyo ese dato, la baja real entre el 13 y el 22 de abril es de 81,10 → 79,15 kg (−1,95 kg en 10 días): sigue siendo mucho y una parte importante todavía es agua y glucógeno, pero la magnitud es más razonable. Lo honesto es reconocer que el registro no captura todo lo que el cuerpo hace.</li>
-    </ol>
-    <p> </p>
+      <li><strong>Los pasos equivalentes predicen mejor la glucemia que el podómetro crudo.</strong> La correlación con pasos de podómetro es 0,02 — prácticamente nula. Con pasos equivalentes sube a −0,36. Entrenar no es lo mismo que caminar: el podómetro no distingue una hora de gimnasio de una hora sentado con el teléfono en el bolsillo.</li>
+      <li><strong>Existe un umbral operativo alrededor de los 10.000 pasos equivalentes.</strong> Por debajo de ese valor la glucemia fluctúa sin tendencia clara; por encima empieza a bajar de manera consistente. No es un umbral clínico — depende de mis condiciones particulares — pero orienta cuánto hay que moverse para que el esfuerzo se traduzca en resultado medible.</li>
+      <li><strong>La combinación de actividades importa más que el volumen aislado.</strong> El único día con gimnasio y pádel juntos (20/4) registró 29.294 pasos equivalentes y las tres mediciones de glucemia de ese día no pasaron de 123 mg/dL. Una sola observación no alcanza para concluir, pero sugiere que la variedad de estímulos físicos puede tener efecto adicional al del volumen total.</li>
+      <li><strong>La etapa de seguimiento confirma que el efecto se sostiene.</strong> Entre el 25 de abril y el 7 de mayo — once días con seis de descanso — la glucemia promedio fue de 121 mg/dL, prácticamente idéntica a la del período de entrenamiento activo (122 mg/dL). El peso se estabilizó entre 79,6 y 80,5 kg. Esto sugiere que el hábito instalado amortigua los días sin actividad, al menos en este período corto.</li>
+      <li><strong>La alimentación y el sueño no fueron registrados.</strong> Son dos de los factores con mayor impacto sobre la glucemia y su ausencia limita cualquier conclusión causal. La tendencia a la baja observada es real, pero no es posible aislar el efecto del entrenamiento de otros cambios concurrentes en esos 28 días.</li>
+      <li><strong>El registro no captura todo lo que el cuerpo hace.</strong> El dato de peso del 23/4 (77,95 kg) es un outlier explicado por horas de trabajo físico en el jardín que no quedaron en ningún sensor. Excluyendo ese punto, la variación registrada entre el 13 de abril y el 7 de mayo es de 81,10 → 80,50 kg (−0,60 kg): una cifra conservadora que todavía incluye agua y glucógeno. La honestidad metodológica obliga a reconocer este límite.</li>
+    </ol> 
     <p><em>Nota: estos datos son personales. Surgen de registros en Accu-Chek (glucemia) y pasos del podómetro del celular.</em></p>
   </section>
 
@@ -154,7 +155,7 @@
 
 <footer>
   <p>
-    Datos registrados del 7 al 23 de abril de 2026 · 27 observaciones en 17 días · 6 variables directas y derivadas ·
+    Datos registrados del 7 de abril al 7 de mayo de 2026 · 40 observaciones en 28 días · 6 variables directas y derivadas ·
     Sujeto: hombre, 46 años, 165 cm · BMR Mifflin-St Jeor: 1.602 kcal/día ·
     Herramientas: Datawrapper, RAWGraphs, Inkscape, Flourish, Tableau Public ·
     <a href="https://github.com/lcollell-cell/infovis/tree/main/tp1">Código fuente en GitHub</a>
